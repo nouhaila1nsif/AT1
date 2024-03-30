@@ -4,6 +4,7 @@
     {
       namespace Atelier
     {
+          Console.WriteLine("Le nom est nouhaila";
         public class Class1
         {
             // Déclaration d'une variable de type string
