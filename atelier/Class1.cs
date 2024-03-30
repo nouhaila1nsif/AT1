@@ -1,44 +1,36 @@
-﻿namespace atelier
+﻿namespace Atelier
 {
     public class Class1
     {
-      namespace Atelier
-    {
-          Console.WriteLine("Le nom est nouhaila");
-        public class Class1
+        // Déclaration d'une variable de type string
+        private string nom;
+
+        // Constructeur par défaut
+        public Class1()
         {
-            // Déclaration d'une variable de type string
-            private string nom;
+            // Initialisation de la variable nom
+            nom = "Inconnu";
+        }
 
-            // Constructeur par défaut
-            public Class1()
+        // Méthode pour afficher le nom
+        public void AfficherNom()
+        {
+            Console.WriteLine("Le nom est : " + nom);
+        }
+
+        // Méthode pour modifier le nom
+        public void ModifierNom(string nouveauNom)
+        {
+            // Vérification de la longueur du nouveau nom
+            if (nouveauNom.Length > 20)
             {
-                // Initialisation de la variable nom
-                nom = "Inconnu";
+                Console.WriteLine("Le nom est trop long. Veuillez entrer un nom de 20 caractères maximum.");
             }
-
-            // Méthode pour afficher le nom
-            public void AfficherNom()
+            else
             {
-                Console.WriteLine("Le nom est : " + nom);
-            }
-
-            // Méthode pour modifier le nom
-            public void ModifierNom(string nouveauNom)
-            {
-                // Vérification de la longueur du nouveau nom
-                if (nouveauNom.Length > 20)
-                {
-                    Console.WriteLine("Le nom est trop long. Veuillez entrer un nom de 20 caractères maximum.");
-                }
-                else
-                {
-                    // Affectation du nouveau nom
-                    nom = nouveauNom;
-                }
+                // Affectation du nouveau nom
+                nom = nouveauNom;
             }
         }
     }
-
-}
 }
