@@ -1,35 +1,36 @@
-﻿namespace Atelier
+using System;
+
+namespace Atelier
 {
-    public class Class1
+    public class Program
     {
-        // Déclaration d'une variable de type string
-        private string nom;
-
-        // Constructeur par défaut
-        public Class1()
+        static void Main(string[] args)
         {
-            // Initialisation de la variable nom
-            nom = "Inconnu";
-        }
+            // Déclaration d'un tableau de nombres entiers
+            int[] nombres = new int[5];
 
-        // Méthode pour afficher le nom
-        public void AfficherNom()
-        {
-            Console.WriteLine("Le nom est : " + nom);
-        }
-
-        // Méthode pour modifier le nom
-        public void ModifierNom(string nouveauNom)
-        {
-            // Vérification de la longueur du nouveau nom
-            if (nouveauNom.Length > 20)
+            // Saisie des nombres par l'utilisateur
+            for (int i = 0; i < nombres.Length; i++)
             {
-                Console.WriteLine("Le nom est trop long. Veuillez entrer un nom de 20 caractères maximum.");
+                Console.WriteLine("Entrez un nombre : ");
+                nombres[i] = int.Parse(Console.ReadLine());
             }
-            else
+
+            // Affichage du tableau
+            Console.WriteLine("Voici les nombres saisis : ");
+            foreach (int nombre in nombres)
             {
-                // Affectation du nouveau nom
-                nom = nouveauNom;
+                Console.WriteLine(nombre);
+            }
+
+            // Tri du tableau par ordre croissant
+            Array.Sort(nombres);
+
+            // Affichage du tableau trié
+            Console.WriteLine("Voici les nombres triés par ordre croissant : ");
+            foreach (int nombre in nombres)
+            {
+                Console.WriteLine(nombre);
             }
         }
     }
