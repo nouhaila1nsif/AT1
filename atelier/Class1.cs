@@ -24,7 +24,7 @@ namespace Atelier
             }
 
             // Tri du tableau par ordre croissant
-            Array.Sort(nombres);
+            
 
             // Affichage du tableau trié
             Console.WriteLine("Voici les nombres triés par ordre croissant : ");
